@@ -1,0 +1,130 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url(./x-box-g6eaa4f91f_1920.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .container {
+        width: 60%;
+        height: 60%;
+        background: rgba(0, 0, 0, 0.75);
+        background: linear-gradient(to right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
+        border-radius: 30px;
+        position: relative;
+        backdrop-filter: blur(3px);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    p {
+        display: block;
+        flex-basis: 60%;
+        font-size: 20px;
+        color: rgb(14, 122, 13);
+        font-family: 'Press Start 2P', cursive;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+    
+    .fa-xbox {
+        position: absolute;
+        font-size: 20em;
+        color: rgb(14, 122, 13);
+        top: 0;
+        left: 100%;
+        z-index: 0;
+        animation: xbox 60s linear infinite;
+    }
+    
+    .btn {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        height: 50px;
+        width: 250px;
+        background: rgb(14, 122, 13);
+        font-family: 'Press Start 2P', cursive;
+        border: none;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    
+    .btn .fa-user {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .btn:hover {
+        color: rgb(14, 122, 13);
+        background: rgb(255, 255, 255);
+    }
+    
+    @keyframes xbox {
+        0% {
+            transform: rotate(40deg);
+            top: -20%;
+            left: -20%
+        }
+        10% {
+            transform: rotate(-40deg);
+        }
+        20% {
+            transform: rotate(40deg);
+        }
+        30% {
+            transform: rotate(-40deg);
+        }
+        40% {
+            transform: rotate(40deg);
+        }
+        50% {
+            transform: rotate(-40deg);
+        }
+        60% {
+            transform: rotate(40deg);
+        }
+        70% {
+            transform: rotate(-40deg);
+        }
+        80% {
+            transform: rotate(40deg);
+        }
+        90% {
+            transform: rotate(-40deg);
+        }
+        100% {
+            top: 100%;
+            right: 100%
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        body {
+            align-items: flex-start;
+        }
+        .container {
+            width: 100%;
+            height: 80%;
+        }
+        p {
+            flex-basis: 90%;
+            font-size: 1em;
+        }
+    }
